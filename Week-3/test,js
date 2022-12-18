@@ -1,0 +1,41 @@
+var one=Math.max()<Math.min()
+var two=Math.max()> Math.min()
+
+console.log(one);
+console.log(two);
+console.log(Math.min())
+console.log(typeof(NaN));
+console.log(parseInt("555Hi"));
+
+console.log(parseInt("Hi555"));
+var oneObj={Song:"Prayer",Year:2021};
+
+var twoObj={Song:"Prayer",Year:2021};
+
+ 
+
+console.log(oneObj==twoObj);
+
+console.log(oneObj===twoObj);
+function foo(...args){
+
+    console.log(typeof args);
+    
+    }
+    
+    foo(12);
+    let arr=[5,23,10,67,2,9];
+
+            arr.push(34,11);
+
+arr.sort();
+
+console.log(arr);
+
+var array=['One','Two','Three'];
+
+var ans=array.shift();
+
+ 
+
+console.log(ans);
