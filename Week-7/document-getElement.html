@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p001", class="para">para-1-text</p>
+    <p id="p002", class="para">para-2-text</p>
+    <h2 id="h001", class="header"> heading2Text</h2>
+    <h2 id="h002", class="header"> heading2Text</h2>
+
+    <h3 id="h003", class="header"> heading3Text</h3>
+    <h3 id="h004", class="header"> heading3Text</h3>
+
+    <div id="d001">
+        <p>
+            This paragraph is in the DIV tag.
+        </p>
+    </div>
+    <button onclick="changeAll()" id="buttonChangeAll">change all</button>
+
+    <script>
+        'use strict'
+        console.log(document.getElementById("h001"));
+        console.log(document.getElementById("p001"));
+        console.log(document.getElementById("p002"));
+        console.log(document.getElementsByClassName("para"))
+        // var paraElements = document.getElementsByClassName("para")
+        var paraElements = document.querySelectorAll("p")
+        Array.from(paraElements).forEach(element => {
+            if(element.tagName == 'P' ){
+                console.log("tag is ", element.tagName);
+                console.log(element.textContent)
+                element.textContent = "Its an updated text content";   
+            }
+        });
+
+        // add a h1 tag under <div> tag
+        var h1 = "<h1>This is heading1</h1><p>this is a bit of text under H1</p>";
+        //document.querySelector("#d001").innerHTML("h1");
+        document.getElementById("d001").innerHTML=h1;
+
+        // change the font colot of all tehe paragraphs into red
+        Array.from(document.querySelectorAll("p")).forEach(function(item){
+            //item.style.color ="red";
+            console.log(item);
+        } );
+        var originalHTML = document.getElementsByTagName("body")[0].innerHtML
+        console.log(originalHTML);
+        function changeAll(){
+            var originalHTML = ``;
+            if(document.getElementById("buttonChangeAll").textContent=="change all"){
+                
+                var originalHTML = document.getElementsByTagName("body")[0].innerHtML
+                console.log(originalHTML);
+                var allPara= document.querySelectorAll("p");
+                Array.from(allPara).forEach(it => {
+                    it.textContent = "PARAGRAPH";
+                    it.style.color = 'red'    
+                })
+
+                var allHeads= document.querySelectorAll(".header");
+                Array.from(allHeads).forEach(it => {
+                    it.textContent = "HEADING";
+                    it.style.color = 'blue'    
+                })
+                document.getElementById("buttonChangeAll").textContent="reset";
+            }
+            else{
+                //document.getElementsByTagName("body")[0].innerHTML = originalHTML;
+                document.getElementById("buttonChangeAll").textContent="change all";
+            }
+            
+        }
+
+
+
+    </script>
+</body>
+</html>
