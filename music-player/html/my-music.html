@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-music</title>
+    <link rel="stylesheet" href="..\css\my-music.css">
+    <link rel="script" href="..\script\script.js">
+    <link rel="stylesheet" href="..\css\fontawesome-free-5.15.4-web\css\all.min.css">
+</head>
+<body>
+
+    <div class="playing-track">
+        <p>Playing x of y</p>
+    </div>
+    <div class = "track-picture">
+        <img src="..\media\picture\default-picture.JPG" alt="">
+    </div>
+    <div class="title-artist">
+        <p id="title">Track: Track name </p>
+        <p id="artist">Artist: Artist name </p>
+    </div>
+    <div class="play-next-prev-buttons">
+        <i class="fas fa-step-backward"></i>
+        <i class="fas fa-backward"></i>
+        <i class="fas fa-play-circle fa-2x"></i>
+        <i class="fas fa-forward"></i>
+        <i class="fas fa-step-forward"></i>
+
+    </div>
+    <div class="track-seek-bar">
+        <input type="range" name="track-bar" id="track-bar" min="0" max="100">
+    </div>
+    <div class="volume-seek-bar">
+        <i class="fas fa-volume-mute"></i>
+        <input type="range" name="volume-bar" id="volume-bar" min="0" max="100">
+        <i class="fas fa-volume-up"></i>
+    </div>
+</body>
+</html>
